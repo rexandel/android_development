@@ -4,13 +4,224 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#BBDEFB">
+    android:background="#BBDEFB"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Заголовок и счет -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Page"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="БЫСТРАЯ ИГРА"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Очки: "
+                android:textSize="18sp"
+                android:textColor="#1976D2" />
+
+            <TextView
+                android:id="@+id/scoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Основной контент: поле игры и следующая фигура -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Игровое поле с видимой сеткой -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/grid_background"
+            android:elevation="4dp">
+
+            <!-- Контейнер для ячеек игрового поля -->
+            <GridLayout
+                android:id="@+id/gameBoard"
+                android:layout_width="300dp"
+                android:layout_height="600dp"
+                android:columnCount="10"
+                android:rowCount="20"
+                android:background="#80000000">
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- Блок с следующей фигурой и уровнем -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Следующая:"
+                android:textSize="16sp"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Сетка для следующей фигуры -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_background_small"
+                android:layout_marginBottom="24dp">
+
+                <GridLayout
+                    android:id="@+id/nextPieceView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:columnCount="4"
+                    android:rowCount="4"
+                    android:background="#80000000"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Уровень:"
+                android:textSize="16sp"
+                android:textColor="#1976D2"/>
+
+            <TextView
+                android:id="@+id/levelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Панель управления -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- Кнопки управления -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="←"
+                android:textSize="20sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/rotateButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="↻"
+                android:textSize="20sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="→"
+                android:textSize="20sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/downButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="↓"
+            android:textSize="20sp"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+
+        <!-- Кнопки управления игрой -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="▶"
+                android:textSize="16sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏸"
+                android:textSize="16sp"
+                android:backgroundTint="#FF9800"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="↺"
+                android:textSize="16sp"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
