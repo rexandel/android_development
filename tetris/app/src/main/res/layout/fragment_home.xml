@@ -61,22 +61,206 @@
         android:gravity="center">
 
         <!-- Игровое поле с видимой сеткой -->
+        <!-- Игровое поле с видимой сеткой -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/grid_background"
+            android:background="@android:color/white"
+            android:padding="2dp"
             android:elevation="4dp">
 
-            <!-- Контейнер для ячеек игрового поля -->
-            <GridLayout
+            <!-- Таблица 20 строк × 10 столбцов -->
+            <TableLayout
                 android:id="@+id/gameBoard"
                 android:layout_width="300dp"
-                android:layout_height="600dp"
-                android:columnCount="10"
-                android:rowCount="20"
-                android:background="#80000000">
-            </GridLayout>
+                android:layout_height="375dp"
+                android:stretchColumns="*"
+                android:background="#E3F2FD"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle">
+
+                <!-- Создаем 20 строк с фиксированной высотой -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
 
         <!-- Блок с следующей фигурой и уровнем -->
@@ -95,20 +279,49 @@
                 android:textColor="#1976D2"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- Сетка для следующей фигуры -->
+            <!-- Сетка для следующей фигуры 4x4 -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/grid_background_small"
+                android:background="@android:color/white"
+                android:padding="2dp"
                 android:layout_marginBottom="24dp">
 
-                <GridLayout
+                <TableLayout
                     android:id="@+id/nextPieceView"
-                    android:layout_width="120dp"
+                    android:layout_width="60dp"
                     android:layout_height="120dp"
-                    android:columnCount="4"
-                    android:rowCount="4"
-                    android:background="#80000000"/>
+                    android:stretchColumns="*"
+                    android:background="#E3F2FD">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                        <View android:background="@drawable/cell_border" android:layout_weight="1" android:layout_height="30dp"/>
+                    </TableRow>
+                </TableLayout>
             </LinearLayout>
 
             <TextView
